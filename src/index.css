@@ -1,0 +1,65 @@
+/* google font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap');
+
+/* layout */
+:root {
+  --primary: #1aac83;
+  --error: #e7195a;
+}
+body {
+
+  margin: 0;
+  font-family: "Poppins", serif;
+  height: 100%;
+  background: rgb(32,153,217);
+  background: linear-gradient(180deg, rgba(32,153,217,1) 0%, rgba(103,198,255,1) 93%);
+}
+header {
+  background: #fff;
+}
+header .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header a {
+  color: #333;
+  text-decoration: none;
+}
+.pages{
+  max-width: 1400px;
+  padding: 20px;
+  margin: 0 auto;
+}
+.d-flex {
+  display: flex;
+}
+
+.DropdownButton {
+  flex-shrink: 0;
+}
+
+.container {
+  flex-grow: 1;
+  padding-left: 15px;
+}
+/* Min DropdownButton */
+/* For screens larger than 768px */
+@media screen and (min-width: 768px) {
+  .dropdown-button {
+    flex-shrink: 0;
+  }
+}
+
+/* For screens smaller than 768px */
+@media screen and (max-width: 767px) {
+  .DropdownButton {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }}
+
+
