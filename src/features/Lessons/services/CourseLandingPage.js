@@ -9,6 +9,7 @@ const CourseLandingPage = () => {
     return (
         <CourseListContainer>
             <TitleDesign>Course landing page</TitleDesign>
+            <TextDesign>Here, you have the option to upload images to the CourseLandingPage. Only .jpeg .jpg and .png are allowed</TextDesign>
             <UploadToS3Course courseId= {courseId}/>
         </CourseListContainer>
     );
@@ -16,6 +17,13 @@ const CourseLandingPage = () => {
 
 export default CourseLandingPage;
 
+
+const TextDesign = styled.p`
+  margin: 20px 0 20px 0;
+  background: #0f3a6a;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+`
 
 
 const CourseListContainer = styled.div`
