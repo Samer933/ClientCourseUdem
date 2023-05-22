@@ -43,10 +43,10 @@ const UploadToS3Course = ({courseId}) => {
     // multipart file upload
     const uploadMultipartFile =  async (file) => {
 
-        const isImage = file.type === 'image/jpeg' || file.type === 'image/png';
+        const isImage = file.type === 'image/jpeg' || file.type === 'image/png' || file.type === 'image/jpg';
 
         if (!isImage) {
-            window.alert('Invalid file type. Only JPEG and PNG images are allowed.');
+            window.alert('Invalid file type. Only JPEG, PNG and JPG images are allowed.');
             return;
         }
 
