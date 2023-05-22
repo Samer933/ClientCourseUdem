@@ -1,6 +1,7 @@
 import UpdateCourseForm from "../components/updateCourseForm";
 import useUpdateCourse from "../hooks/useUpdateCourse";
 import styled from "styled-components";
+import FooterEnrolReviewCourseInstructorHome from "../../../layouts/FooterEnrolReviewCourseInstructorHome";
 
 
 const UpdateCourse = () => {
@@ -15,6 +16,7 @@ const UpdateCourse = () => {
         <CourseListContainer>
             <TitleDesign>Update your course</TitleDesign>
             <UpdateCourseForm onSubmit={updateCourse}/>
+            <FooterEnrolReviewCourseInstructorHome/>
         </CourseListContainer>
     )
 }
