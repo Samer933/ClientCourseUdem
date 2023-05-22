@@ -6,7 +6,7 @@ const AuthContext = createContext();
 
 const AuthProvider = ({children}) => {
     const [isAuthenticated, setIsAuthenticated] = useState(false);
-    const {handlePost} = usePostRequest("/auths/logout")
+    const {handlePost} = usePostRequest("https://mernstacktestserver.onrender.com/auths/logout")
 
     useEffect(() => {
         const authToken1 = sessionStorage.getItem('authToken');

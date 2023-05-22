@@ -18,7 +18,7 @@ const GetCourseList = () => {
         const fetchData = async () => {
             try {
                 setIsLoading(true);
-                const response = await axios.get(`/courses/getAll/${userId}`);
+                const response = await axios.get(`https://mernstacktestserver.onrender.com/courses/getAll/${userId}`);
                 setCourses(response.data)
 
             } catch (error) {

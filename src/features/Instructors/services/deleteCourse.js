@@ -5,7 +5,7 @@ import axios from "axios";
 
 const DeleteCourse = ({courseId, deleteActivity}) => {
 
-    const {handleDelete} = useDeleteRequest(`/courses/delete/${courseId}`);
+    const {handleDelete} = useDeleteRequest(`https://mernstacktestserver.onrender.com/courses/delete/${courseId}`);
     const handleDeleteClick = async () => {
         await handleDelete();
         deleteActivity(courseId); // Execute the callback after deleting the course

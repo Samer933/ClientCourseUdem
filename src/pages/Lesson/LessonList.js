@@ -7,7 +7,7 @@ const LessonList = () => {
 
     const {id} = useParams()
 
-    const {data, error, isLoading} = useFetch(`/lessons/${id}/`)
+    const {data, error, isLoading} = useFetch(`https://mernstacktestserver.onrender.com/lessons/${id}/`)
 
     if (isLoading) return <p>Loading lessons...</p>
 

@@ -7,7 +7,7 @@ const useCreateReview = ({courseId}) => {
     const userId = user.passport.user;
     const navigate = useNavigate()
 
-    const {error, isLoading, handlePost} = usePostRequest(`/reviews/${userId}/create/${courseId}`);
+    const {error, isLoading, handlePost} = usePostRequest(`https://mernstacktestserver.onrender.com/reviews/${userId}/create/${courseId}`);
 
     const createReview = async (values) => {
         //handle review creation

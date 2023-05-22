@@ -5,7 +5,7 @@ const useCreateCourse = () => {
     const user = JSON.parse(userString);
     const userId = user.passport.user;
 
-    const {error, isLoading, handlePost} = usePostRequest(`/courses/create/${userId}`);
+    const {error, isLoading, handlePost} = usePostRequest(`https://mernstacktestserver.onrender.com/courses/create/${userId}`);
 
     const createCourse = async (values) => {
         // handle course creation

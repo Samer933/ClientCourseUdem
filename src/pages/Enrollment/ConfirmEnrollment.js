@@ -14,7 +14,7 @@ const ConfirmEnrollment = () => {
     const user = JSON.parse(userString);
     const userId = user.passport.user;
 
-    const {data, error, isLoading} = useFetch(`/enrollments/${userId}/getEnrollmentStatus/${course._id}`)
+    const {data, error, isLoading} = useFetch(`https://mernstacktestserver.onrender.com/enrollments/${userId}/getEnrollmentStatus/${course._id}`)
 
     if (isLoading) return <p>Loading enrollment detail...</p>
 

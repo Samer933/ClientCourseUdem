@@ -6,7 +6,7 @@ const CreateEnrollment = (courseId) => {
     const user = JSON.parse(userString);
     const userId = user.passport.user;
 
-    const {error, isLoading, handlePost} = usePostRequest(`/enrollments/${userId}/create/${courseId}`);
+    const {error, isLoading, handlePost} = usePostRequest(`https://mernstacktestserver.onrender.com/enrollments/${userId}/create/${courseId}`);
 
     const createEnrollment = async (values) => {
         console.log("submit", values)

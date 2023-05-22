@@ -1,15 +1,12 @@
 import React from 'react';
 import {Link, useParams} from "react-router-dom";
 import useFetch from "../../../hooks/useFetch";
-import CreateLessonContent from "./CreateLessonContent";
-import CourseLandingPage from "./CourseLandingPage";
-import Button from "../../../components/ui/Button";
 import styled from "styled-components";
 
 const ManageCourse = () => {
     const {id} = useParams();
 
-    const {data, error, isLoading} = useFetch(`/courses/${id}`)
+    const {data, error, isLoading} = useFetch(`https://mernstacktestserver.onrender.com/courses/${id}`)
 
     if (isLoading) return <p>Loading course detail...</p>
 

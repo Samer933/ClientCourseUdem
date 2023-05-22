@@ -16,7 +16,7 @@ const LessonPage = () => {
 
     const {name, id} = useParams()
     const {getUrlStoreInS3} = getFilesFromS3();
-    const {data, error, isLoading} = useFetch(`/lessons/getAll/${id}/`);
+    const {data, error, isLoading} = useFetch(`https://mernstacktestserver.onrender.com/lessons/getAll/${id}/`);
 
 
     const [video, setVideo] = useState({});
@@ -36,7 +36,7 @@ const LessonPage = () => {
     const getUrl = async (lessonId) => {
         try {
             setVideo(null);
-            const response = await axios.get(`/lessons/${lessonId}`);
+            const response = await axios.get(`https://mernstacktestserver.onrender.com/lessons/${lessonId}`);
             if (response.data.thumbnailUrl || response.data.videoUrl) {
                 const videoUrl = await getUrlStoreInS3(response.data.videoUrl);
                 setVideo(videoUrl);

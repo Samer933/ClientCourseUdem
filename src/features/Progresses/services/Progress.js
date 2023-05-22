@@ -15,7 +15,7 @@ const Progress = ({lessonId, courseId:id}) => {
     useEffect(() => {
         const fetchProgress = async () => {
             try {
-                const response = await axios.get(`/progresses/api/${lessonId}/${userId}`)
+                const response = await axios.get(`https://mernstacktestserver.onrender.com/progresses/api/${lessonId}/${userId}`)
 
                 if (response.data.length > 0) {
                     const { completed, _id } = response.data[0];
@@ -34,7 +34,7 @@ const Progress = ({lessonId, courseId:id}) => {
 
     const addProgress = async (lessonId) => {
         try {
-            await axios.post(`/progresses/${userId}/createProgress/${id}/${lessonId}`)
+            await axios.post(`https://mernstacktestserver.onrender.com/progresses/${userId}/createProgress/${id}/${lessonId}`)
             setIsButtonDisabled(true);
             setIsChecked(true);
 

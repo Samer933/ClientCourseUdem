@@ -17,12 +17,12 @@ const CreateLessonContent = () => {
     const [showDeleteConfirmation, setShowDeleteConfirmation] = useState(false);
     const [showAddContent, setShowAddContent] = useState(false);
 
-    const {error, isLoading, handlePost} = usePostRequest(`/lessons/${id}/createLessons`);
-    const {handleDelete} = useDeleteRequest(`/lessons/delete/${lessonId}`)
+    const {error, isLoading, handlePost} = usePostRequest(`https://mernstacktestserver.onrender.com/lessons/${id}/createLessons`);
+    const {handleDelete} = useDeleteRequest(`https://mernstacktestserver.onrender.com/lessons/delete/${lessonId}`)
 
     const fetchLesson = async () => {
         try {
-            const res = await axios.get(`/lessons/getAll/${id}`);
+            const res = await axios.get(`https://mernstacktestserver.onrender.com/lessons/getAll/${id}`);
             setLesson(res.data);
         } catch (error) {
             console.log(error)

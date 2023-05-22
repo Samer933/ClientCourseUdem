@@ -14,7 +14,7 @@ const EnrollmentPage = () => {
     const user = JSON.parse(userString);
     const userId = user.passport.user;
 
-    const {data, error, isLoading} = useFetch(`/enrollments/getEnrollment/${userId}`)
+    const {data, error, isLoading} = useFetch(`https://mernstacktestserver.onrender.com/enrollments/getEnrollment/${userId}`)
 
     const [imageUrls, setImageUrls] = useState({});
 

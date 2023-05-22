@@ -7,7 +7,7 @@ function ForgotPassword() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post(`/auths/forgotPassword`, { email : email });
+            const response = await axios.post(`https://mernstacktestserver.onrender.com/auths/forgotPassword`, { email : email });
             console.log(response.data);
         } catch (error) {
             console.error(error);

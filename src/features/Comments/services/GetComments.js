@@ -13,7 +13,7 @@ const GetComments = ({lessonId}) => {
             const fetchComments = async () => {
                 setIsLoading(true);
                 try {
-                    const response = await axios.get(`/comments/getComments/${lessonId}`);
+                    const response = await axios.get(`https://mernstacktestserver.onrender.com/comments/getComments/${lessonId}`);
                     setData(response.data);
                 } catch (error) {
                     setError(error);

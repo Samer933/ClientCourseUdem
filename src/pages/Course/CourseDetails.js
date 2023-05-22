@@ -16,7 +16,7 @@ function CourseDetails() {
     const {id} = useParams()
     const [image, setImage] = useState({});
 
-    const {data, error, isLoading} = useFetch(`/courses/${id}`)
+    const {data, error, isLoading} = useFetch(`https://mernstacktestserver.onrender.com/courses/${id}`)
 
     useEffect(() => {
         getUrl();
@@ -29,7 +29,7 @@ function CourseDetails() {
     const getUrl = async () => {
         try {
             setImage(null);
-            const response = await axios.get(`/courses/${id}`);
+            const response = await axios.get(`https://mernstacktestserver.onrender.com/courses/${id}`);
             if (response.data.courseThumbnail) {
                 const imageUrl = await getUrlStoreInS3(response.data.courseThumbnail);
                 setImage(imageUrl);

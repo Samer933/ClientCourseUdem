@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import useFetch from "../hooks/useFetch";
 import { useState } from "react";
 const Search = () => {
-    const { data, error, isLoading } = useFetch("/courses");
+    const { data, error, isLoading } = useFetch("https://mernstacktestserver.onrender.com/courses");
     const [search, setSearch] = useState("");
     const [showList, setShowList] = useState(false);
 

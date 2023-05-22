@@ -13,7 +13,7 @@ const EnrollmentProgress = ({courseId}) => {
     useEffect(() => {
         const fetchCourseProgress = async () => {
             try {
-                const response = await axios.get(`/progresses/course/${courseId}/${userId}`)
+                const response = await axios.get(`https://mernstacktestserver.onrender.com/progresses/course/${courseId}/${userId}`)
 
                 if (response.data.length > 0) {
                     setCourseProgress(response.data.length)
@@ -30,7 +30,7 @@ const EnrollmentProgress = ({courseId}) => {
     useEffect(() => {
         const fetchCourse = async () => {
             try {
-                const response = await axios.get(`/lessons/getLessonsOfCourse/${courseId}`)
+                const response = await axios.get(`https://mernstacktestserver.onrender.com/lessons/getLessonsOfCourse/${courseId}`)
                 setTotalLessons(response.data.length)
 
             } catch (error) {

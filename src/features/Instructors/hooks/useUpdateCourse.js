@@ -5,7 +5,7 @@ import {useNavigate, useParams} from "react-router-dom";
 
 const useUpdateCourse = () => {
     const {id} = useParams();
-    const {error, isLoading, handlePut} = usePutRequest(`/courses/update/${id}`);
+    const {error, isLoading, handlePut} = usePutRequest(`https://mernstacktestserver.onrender.com/courses/update/${id}`);
     const navigate = useNavigate();
 
     const updateCourse = async (values) => {

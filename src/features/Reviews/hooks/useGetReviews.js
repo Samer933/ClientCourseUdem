@@ -13,7 +13,7 @@ const useFetchReviews = (courseId) => {
             const fetchReviews = async () => {
                 setIsLoading(true);
                 try {
-                    const response = await axios.get(`/reviews/${courseId}`);
+                    const response = await axios.get(`https://mernstacktestserver.onrender.com/reviews/${courseId}`);
                     setData(response.data);
                 } catch (error) {
                     setError(error);
