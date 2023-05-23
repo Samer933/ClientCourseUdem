@@ -1,12 +1,12 @@
 import usePostRequest from "../../../hooks/usePostRequest";
+import {useNavigate} from "react-router-dom";
 
 const useSignup = () => {
     const { error, isLoading, handlePost } = usePostRequest('https://mernstacktestserver.onrender.com/auths/register');
-
+    const navigate = useNavigate();
     const signup = async (values) => {
-        // handle registration logic
-        console.log('submit', values);
         await handlePost(values);
+        navigate("/login");
     };
 
     return { signup, error, isLoading };
