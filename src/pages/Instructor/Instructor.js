@@ -1,6 +1,6 @@
 import GetCourseList from "../../features/Instructors/services/getCourseList";
 import Button from "../../components/ui/Button";
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import styled from "styled-components";
 import FooterlogSign from "../../layouts/FooterlogSign";
 import FooterEnrollmentPage from "../../layouts/FooterEnrolReviewCourseInstructorHome";
