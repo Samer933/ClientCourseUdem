@@ -1,7 +1,7 @@
 import usePostRequest from "../../../hooks/usePostRequest";
 
 const useSignup = () => {
-    const { error, isLoading, handlePost } = usePostRequest('auths/register');
+    const { error, isLoading, handlePost } = usePostRequest('https://mernstacktestserver.onrender.com/auths/register');
 
     const signup = async (values) => {
         // handle registration logic

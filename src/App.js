@@ -96,7 +96,7 @@ function App() {
                                     <CourseLandingPage/>
                                 </PrivateRoute>}>
                             </Route>
-                            <Route path="/courses/:name/:id" element ={
+                            <Route path="/courses/learning/:id" element ={
                                 <PrivateRoute>
                                     <LessonPage/>
                                 </PrivateRoute>}>

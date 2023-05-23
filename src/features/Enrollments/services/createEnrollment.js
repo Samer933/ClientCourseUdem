@@ -9,7 +9,6 @@ const CreateEnrollment = (courseId) => {
     const {error, isLoading, handlePost} = usePostRequest(`https://mernstacktestserver.onrender.com/enrollments/${userId}/create/${courseId}`);
 
     const createEnrollment = async (values) => {
-        console.log("submit", values)
         await handlePost(values);
     }
     return {createEnrollment, error, isLoading};

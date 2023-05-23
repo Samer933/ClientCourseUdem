@@ -1,7 +1,5 @@
 import Button from "../../../components/ui/Button";
 import useDeleteRequest from "../../../hooks/useDeleteRequest";
-import {useEffect, useState} from "react";
-import axios from "axios";
 
 const DeleteCourse = ({courseId, deleteActivity}) => {
 

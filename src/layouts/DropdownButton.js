@@ -2,10 +2,7 @@
 import React, { useState } from 'react';
 import { Nav, Dropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import styled from 'styled-components';
-
 const DropdownButton = ({ data }) => {
-    console.log('Rendering DropdownButton');
 
     const [isChecked, setIsChecked] = useState(false);
 

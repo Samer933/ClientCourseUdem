@@ -9,7 +9,6 @@ const usePutRequest = (url) => {
     const handlePut = async(postData) => {
         setIsLoading(true);
         try {
-            console.log("thi is ", url);
             const response = await axios.put(url, postData);
             setData(response.data);
             return response;

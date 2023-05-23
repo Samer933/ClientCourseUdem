@@ -4,7 +4,7 @@ import useAuthContext from "../../../hooks/useAuthContext";
 
 const useLogin = () => {
     const {setIsAuthenticated} = useAuthContext();
-    const {data, error, isLoading, handlePost} = usePostRequest("auths/login");
+    const {data, error, isLoading, handlePost} = usePostRequest("https://mernstacktestserver.onrender.com/auths/login");
 
     const login = async (values) => {
         // handle login logic

@@ -14,7 +14,7 @@ const LessonPage = () => {
     const user = JSON.parse(userString);
     const userId = user.passport.user;
 
-    const {name, id} = useParams()
+    const {id} = useParams()
     const {getUrlStoreInS3} = getFilesFromS3();
     const {data, error, isLoading} = useFetch(`https://mernstacktestserver.onrender.com/lessons/getAll/${id}/`);
 
@@ -50,7 +50,7 @@ const LessonPage = () => {
 
     return (
         <Container>
-            <PageTitle>Lesson page for {name.charAt(0).toUpperCase() + name.slice(1)}</PageTitle>
+            <PageTitle>Lesson page</PageTitle>
             <VideoPlayerContainer>
                 {video ? (
                         <VideoPlayer controls preload="auto">

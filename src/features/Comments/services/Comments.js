@@ -27,7 +27,7 @@ const Comments = ({lessonId : lessonID}) => {
     const addComment = async (text, parentId) => {
         console.log("addComment, this is the id", parentId)
         try {
-            const response = await axios.post(`/comments/${userId}/createComment/${lessonId}`, {
+            const response = await axios.post(`https://mernstacktestserver.onrender.com/comments/${userId}/createComment/${lessonId}`, {
                 text: text,
                 parentId: parentId
             })
@@ -44,7 +44,7 @@ const Comments = ({lessonId : lessonID}) => {
         if (window.confirm("Are you sure that you want to remove your comment")){
             console.log("delete comment", commentId)
             try {
-                const response = await axios.delete(`/comments/delete/${commentId}/`)
+                const response = await axios.delete(`https://mernstacktestserver.onrender.com/comments/delete/${commentId}/`)
                 const newComment = response.data.comment;
                 console.log(newComment)
                 const updatedComment = comments.filter(comment => comment._id !== commentId)
@@ -59,7 +59,7 @@ const Comments = ({lessonId : lessonID}) => {
     const updateComment = async (text, commentId) => {
         console.log("updateComment", text, commentId)
         try {
-            const response = await axios.put(`/comments/update/${commentId}`, {
+            const response = await axios.put(`https://mernstacktestserver.onrender.com/comments/update/${commentId}`, {
                 text: text,
                 commentId: commentId
             })
@@ -83,7 +83,7 @@ const Comments = ({lessonId : lessonID}) => {
             const fetchComments = async () => {
                 /*setIsLoading(true);*/
                 try {
-                    const response = await axios.get(`/comments/getComments/${lessonId}`);
+                    const response = await axios.get(`https://mernstacktestserver.onrender.com/comments/getComments/${lessonId}`);
                     setComments(response.data);
                 } catch (error) {
                     console.log(error)

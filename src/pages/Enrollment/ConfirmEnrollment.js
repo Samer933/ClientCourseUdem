@@ -29,7 +29,7 @@ const ConfirmEnrollment = () => {
         <CourseListContainer>
             <TitleDesign>{data ? `You are already enrolled for the course: ${course.title.charAt(0).toUpperCase() + course.title.slice(1)}` : `Confirm enrollment for ${course.title}`}</TitleDesign>
             {data ? (
-                <Link to={`/courses/${course.title}/${course._id}`} style={{ textDecoration: "none" }}>
+                <Link to={`/courses/learning/${course._id}`} style={{ textDecoration: "none" }}>
                     <div>
                         <div>Go to Lesson page of {course.title.charAt(0).toUpperCase() + course.title.slice(1)}</div>
                     </div>

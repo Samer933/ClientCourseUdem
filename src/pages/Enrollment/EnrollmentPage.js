@@ -57,7 +57,7 @@ const EnrollmentPage = () => {
             <EnrollContainer>
                     {data && data.map((course) => (
                             <EnrollItems key={course._id}>
-                                <Link to={`/courses/${course.title}/${course._id}`} style={{textDecoration: "none"}}>
+                                <Link to={`/courses/learning/${course._id}`} style={{textDecoration: "none"}}>
                                     <ImageWrapper>
                                         {imageUrls && imageUrls[course._id] ? (
                                             <CourseThumbnail loading="lazy" src={imageUrls[course._id]} alt="Course Thumbnail"/>

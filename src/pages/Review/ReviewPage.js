@@ -30,7 +30,7 @@ const ReviewPage = ({course}) => {
                     <CreateReview courseId ={course && course._id}/>
                 </div>
 
-                <FooterEnrollmentPage></FooterEnrollmentPage>
+                <FooterEnrollmentPage/>
             </div>
 
         )

@@ -29,7 +29,7 @@ const RestPassword = () => {
         }
 
         try {
-            const response = await axios.post('/auths/changeNewPassword', { email, password }, { headers: { 'Content-Type': 'application/json' } });
+            const response = await axios.post('https://mernstacktestserver.onrender.com/auths/changeNewPassword', { email, password }, { headers: { 'Content-Type': 'application/json' } });
 
             if (response.status === 200) {
                 console.log('Password reset successfully');

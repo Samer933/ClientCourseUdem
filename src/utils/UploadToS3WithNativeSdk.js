@@ -28,7 +28,7 @@ const UploadToS3WithNativeSdk = ({lessonId}) => {
     const [progress , setProgress] = useState(0);
     const [selectedFile, setSelectedFile] = useState(null);
     const [isUploading, setIsUploading] = useState(false);
-    const {handlePut} = usePutRequest(`/lessons/${lessonId}`);
+    const {handlePut} = usePutRequest(`https://mernstacktestserver.onrender.com/lessons/${lessonId}`);
 
     const handleFileInput = (e) => {
         setSelectedFile(e.target.files[0]);

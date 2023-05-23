@@ -28,7 +28,7 @@ const UploadToS3Course = ({courseId}) => {
     const [progress , setProgress] = useState(0);
     const [selectedFile, setSelectedFile] = useState(null);
     const [isUploading, setIsUploading] = useState(false);
-    const {handlePut} = usePutRequest(`/courses/uploadCourseThumbnail/${courseId.id}`);
+    const {handlePut} = usePutRequest(`https://mernstacktestserver.onrender.com/courses/uploadCourseThumbnail/${courseId.id}`);
 
     const handleFileInput = (e) => {
         setSelectedFile(e.target.files[0]);

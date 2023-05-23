@@ -19,7 +19,7 @@ const InstructorPage = () => {
             <div>
                 <GetCourseList/>
             </div>
-<FooterEnrollmentPage></FooterEnrollmentPage>
+<FooterEnrollmentPage/>
         </InstructorContainer>
     )
 }
