@@ -51,26 +51,39 @@ const RestPassword = () => {
     };
 
     return (
-        <Form onSubmit={handleSubmit}>
-            <Input type="password" placeholder="Password" value={password} onChange={handlePasswordChange} />
-            <Input type="password" placeholder="Confirm password" value={confirmPassword} onChange={handleConfirmPasswordChange} />
-            {error && <ErrorMessage>{error}</ErrorMessage>}
-            <Button type="submit">Submit</Button>
-        </Form>
+        <Container>
+            <RestPasswordContainer>
+                <Form onSubmit={handleSubmit}>
+                    <h4>Enter new password</h4>
+                    <Input type="password" placeholder="Password" value={password} onChange={handlePasswordChange} />
+                    <Input type="password" placeholder="Confirm password" value={confirmPassword} onChange={handleConfirmPasswordChange} />
+                    {error && <ErrorMessage>{error}</ErrorMessage>}
+                    <Button type="submit">Submit</Button>
+                </Form>
+            </RestPasswordContainer>
+        </Container>
     );
 };
 
 
-
+const RestPasswordContainer = styled.div`
+  background-color: lightblue;
+  padding: 3rem;
+  border-style: outset;
+  color: #0f3a6a;
+`
+const Container = styled.div`
+  display: flex;
+  max-width: 100%;
+  justify-content: center;
+  width: 40rem;
+  padding: 4.8rem 2.4rem;
+  margin-right: auto;
+  margin-left: auto;
+`
 const Form = styled.form`
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  width: 100%;
-
+ 
   @media screen and (min-width: 768px) {
     width: 50%;
   }
@@ -80,7 +93,7 @@ const Input = styled.input`
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
-  
+
   border-radius: 5px;
   font-size: 1rem;
   border-color: #333333;
